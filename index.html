@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+	
+
+<style>
+
+label, input, select, button {
+  display: block;
+}
+
+input[name="session-type"], input[type="checkbox"] {
+  display: inline-block;
+  margin: 0.2vh auto;
+  width : auto;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(10, 80, 50);
+    color: #efefef;
+}
+
+#title {
+  font-size: 18px;
+  text-align: center;
+
+}
+#description {
+  font-size: 12px;
+  text-align: center;
+}
+#survey-form {
+  width: 60vw;
+  margin: 0 auto;
+  font-size: 14px;
+
+}
+
+fieldset {
+  border: none;
+}
+
+label, input, select {
+  margin: 1em  auto;
+}
+
+#submit, textarea, select, input {
+  margin: 0.5em auto;
+  width: 60vw;
+}
+
+#submit {
+  height: 5vh;
+}
+
+</style>
+
+    <title>Students' Educational Survey</title>
+  </head>
+  <body>
+    <h1 id="title">Students' Educational Survey</h1>
+    <p id="description">Let us know where can we assist you</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name: <input placeholder="Enter your full name" id="name" type="text" required /></label>
+        <label id="email-label" for="email">Email: <input placeholder="Enter your email address" id="email" type="email" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+" required /></label>
+        <label id="number-label">Age:<input placeholder="Enter your age 10-20" id="number" type="number" min="10" max="20" /></label>
+        <label for="dropdown"> How often do you need tutoring?
+          <select id="dropdown">
+            <option>Once a week</option>
+            <option>Twice a Week</option>
+            <option>Thrice a week</option>
+            <option>Four Times</option>
+            <option>Five Times</option>
+            </select>
+        </label>
+        <label> What is your preferred mode of tutoring?
+          <label><input value="online" name="session-type" type="radio"/> Online Session</label>
+          <label><input value="physical" name="session-type" type="radio"/> Physical Session</label>
+        </label>
+        <label> What subjects do you need tutoring in? 
+          <label><input value="cs" type="checkbox"/> Computer Science</label>
+          <label><input value="urd" type="checkbox"/> Urdu</label>
+          <label><input value="mth" type="checkbox"/> Maths</label>
+          <label><input value="phy" type="checkbox"/> Physics</label>
+          <label><input value="chem" type="checkbox"/> Chemistry</label>
+          <label><input value="bio" type="checkbox"/> Biology</label>
+          <label><input value="eng" type="checkbox"/> English</label>
+        </label>
+        <label>What exactly are you struggling with (details) ?</label>
+        <textarea rows="6" cols="30" placeholder="Trigonometric ratios gives me headache..."></textarea>
+        <button id="submit">Submit</button>
+      </fieldset>  
+    </form>
+  </body>  
+</html>
